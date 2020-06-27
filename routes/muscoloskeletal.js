@@ -6,13 +6,13 @@ var db = mongoose.connection;
 
 const Schema = mongoose.Schema;
 
-const surgerySchema = new Schema({}, { strict: false });
-const surgery = mongoose.model('surgery', surgerySchema, 'surgery');
+const muscloloskeletalSchema = new Schema({}, { strict: false });
+const muscolo = mongoose.model('muscolo', muscloloskeletalSchema, 'muscolo');
 
-Router.post('/i/surgery', function(req, res) {
+Router.post('/i/muscoloskeletal', function(req, res) {
   req.body.createdAT=new Date()
   req.body.updatedAT=new Date()
-    db.collection('surgery').insertOne(req.body, function(err, collection) {
+    db.collection('muscolo').insertOne(req.body, function(err, collection) {
         if (err) {
             console.log(err);
             res.send('error occured');
@@ -23,8 +23,8 @@ Router.post('/i/surgery', function(req, res) {
         }
     });
 });
-Router.get('/r/surgery',  function(req, res) {
-    surgery.find(req.query, function(err, collection) {
+Router.get('/r/muscoloskeletal',  function(req, res) {
+    muscolo.find(req.query, function(err, collection) {
         if (err) {
             res.send(err)
         } else {
@@ -34,17 +34,16 @@ Router.get('/r/surgery',  function(req, res) {
 });
 
 
-Router.put('/u/surgery', function (req, res) {
+Router.put('/u/muscoloskeletal', function (req, res) {
     req.body.updatedAT = new Date();
-    
-    surgery.updateOne({
+    muscolo.updateOne({
 
         
         _id: req.body._id
     
     },
         { $set: req.body }
-        , function (err, treatment) {
+        , function (err, aids) {
             if (err) {
 
                 res.send({ success: false, message: "internal error occurred" });
@@ -57,11 +56,10 @@ Router.put('/u/surgery', function (req, res) {
         });
 });
 
-Router.delete('/d/surgery', function (req, res) {
-    
-    surgery.findOneAndRemove({
+Router.delete('/d/muscoloskeletal', function (req, res) {
+    muscolo.findOneAndRemove({
         _id: req.query._id
-    }, function (err, treatment) {
+    }, function (err, cancertype) {
         if (err) {
 
             res.send({ success: false, message: "no details deleted ", error: err });

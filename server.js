@@ -32,7 +32,27 @@ app.use('/cancerapp', require('./routes/connections'));
 app.use('/cancerapp', require('./routes/medication'));
 app.use('/cancerapp', require('./routes/appointment'));
 app.use('/cancerapp', require('./routes/cancertypes'));
+app.use('/cancerapp', require('./routes/aids'));
+app.use('/cancerapp', require('./routes/breast'));
+app.use('/cancerapp', require('./routes/blood'));
+app.use('/cancerapp', require('./routes/endocrine'));
+app.use('/cancerapp', require('./routes/eye'));
+app.use('/cancerapp', require('./routes/genitourinary'));
+app.use('/cancerapp', require('./routes/germcells'));
+app.use('/cancerapp', require('./routes/gynecology'))
+app.use('/cancerapp', require('./routes/head'))
+app.use('/cancerapp', require('./routes/digestive'));
+app.use('/cancerapp', require('./routes/muscoloskeletal'));
+app.use('/cancerapp', require('./routes/neurologic'));
+app.use('/cancerapp', require('./routes/respiratory'));
+app.use('/cancerapp', require('./routes/skin'));
+
+
+
 app.use('/cancerapp', require('./routes/treatmenttype'));
+app.use('/cancerapp', require('./routes/radiotherapy'));
+app.use('/cancerapp', require('./routes/chemotherapy'));
+
 app.use('/cancerapp', require('./routes/vitalparameters'));
 app.use('/cancerapp', require('./routes/symptoms'));
 app.use('/cancerapp', require('./routes/fileupload'));

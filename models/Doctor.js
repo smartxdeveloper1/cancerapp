@@ -2,7 +2,9 @@ let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 mongoose.set('useCreateIndex', true);
 let doctorSchema = new Schema({
-    name: { type: String,required:true},
+    firstName: { type: String,required:true},
+    lastName:{type:String},
+    age:{type:String},
     phoneNo: { type: Number,unique:true },
     emailId: { type: String },
     gender:{type:String},
@@ -11,6 +13,9 @@ let doctorSchema = new Schema({
     medicalPractice:{type:String},
     expertise:{type:String},
     mciNo:{type:String},
+    mciState:{type:String},
+    address:{type:String},
+    bloodGroup:{type:String},
     createdAT: { type: Date },
     updatedAT: { type: Date }
 
