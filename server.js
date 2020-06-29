@@ -52,6 +52,12 @@ app.use('/cancerapp', require('./routes/skin'));
 app.use('/cancerapp', require('./routes/treatmenttype'));
 app.use('/cancerapp', require('./routes/radiotherapy'));
 app.use('/cancerapp', require('./routes/chemotherapy'));
+app.use('/cancerapp', require('./routes/targetedagents'));
+app.use('/cancerapp', require('./routes/immunity'));
+app.use('/cancerapp', require('./routes/procedure'));
+app.use('/cancerapp', require('./routes/topicals'));
+app.use('/cancerapp', require('./routes/others'));
+
 
 app.use('/cancerapp', require('./routes/vitalparameters'));
 app.use('/cancerapp', require('./routes/symptoms'));
