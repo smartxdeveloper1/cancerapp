@@ -8,7 +8,7 @@ let patientSchema = new Schema({
     emailId: { type: String },
     gender:{type:String},
     age:{type:Number},
-    dateofDiagnosis:{type:Number},
+    dateofDiagnosis:{type:Date},
     type:{type:String},
     previousHistory:{type:String},
     address:{type:String},
